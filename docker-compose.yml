@@ -1,0 +1,35 @@
+# docker-compose.yml
+# Local development stack for Hybrid RAG.
+#
+# Services:
+#   redis  — session history + semantic cache
+#
+# Start:  docker compose up -d
+# Stop:   docker compose down
+# Reset:  docker compose down -v   (wipes volume)
+
+version: "3.9"
+
+services:
+
+  redis:
+    image: redis:7-alpine
+    container_name: hybrid_rag_redis
+    restart: unless-stopped
+    command: >
+      redis-server
+      --maxmemory 512mb
+      --maxmemory-policy allkeys-lru
+      --appendonly yes
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  redis_data:

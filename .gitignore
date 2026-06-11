@@ -1,0 +1,15 @@
+__pycache__
+
+Research_papers/
+*.pdf
+*.docx
+
+
+results/
+.env
+.venv
+venv/
+
+.ipynb_checkpoints/
+*.ipynb
+ 

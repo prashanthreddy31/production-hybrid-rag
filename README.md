@@ -1,8 +1,10 @@
+<div align="center">
 # 📚 Hybrid RAG
 
 A production-grade, domain-specific Retrieval-Augmented Generation (RAG) system built with LangChain. Query a fixed set of documents using a hybrid search pipeline — combining BM25 sparse retrieval and dense vector search in a single Pinecone index — with Cohere cross-encoder reranking, citation-enforced generation, and a Streamlit chat UI.
 
 ---
+</div>
 
 ## Architecture Overview
 

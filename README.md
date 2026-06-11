@@ -304,7 +304,7 @@ Or individually:
 
 ```bash
 python -m src.evaluation.chunk_quality      # no LLM calls, fastest
-python -m src.evaluation.latency_bench --runs 30
+python -m src.evaluation.latency_bench 
 python -m src.evaluation.ragas_runner
 ```
 
@@ -359,5 +359,9 @@ All settings live in `config.py` and are loaded from `.env`.
 
 ---
 
-### Author
+<div align="center">
+
+Built with LangChain · Pinecone · Cohere · HuggingFace · Redis · Ragas · Groq · Streamlit
+
+</div>
 

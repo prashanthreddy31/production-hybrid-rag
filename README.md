@@ -1,5 +1,16 @@
 <div align="center">
+
 # 📚 Hybrid RAG
+
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10+-3776ab?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![LangChain](https://img.shields.io/badge/LangChain-Orchestration-ff6b35?style=flat-square)](https://python.langchain.com/)
+[![Hugging Face](https://img.shields.io/badge/HuggingFace-Embeddings-FFD21E?style=flat-square&logo=huggingface&logoColor=black)](https://huggingface.co/)
+[![Pinecone](https://img.shields.io/badge/Pinecone-VectorDB-0F6FFF?style=flat-square)](https://www.pinecone.io/)
+[![Cohere](https://img.shields.io/badge/Cohere-Reranker-39594D?style=flat-square)](https://cohere.com/)
+[![Redis](https://img.shields.io/badge/Redis-Semantic_Cache-DC382D?style=flat-square&logo=redis&logoColor=white)](https://redis.io/)
+[![Groq](https://img.shields.io/badge/Groq-LLM-f55036?style=flat-square)](https://groq.com/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-UI-ff4b4b?style=flat-square&logo=streamlit&logoColor=white)](https://streamlit.io/)
 
 A production-grade, domain-specific Retrieval-Augmented Generation (RAG) system built with LangChain. Query a fixed set of documents using a hybrid search pipeline — combining BM25 sparse retrieval and dense vector search in a single Pinecone index — with Cohere cross-encoder reranking, citation-enforced generation, and a Streamlit chat UI.
 

@@ -150,7 +150,7 @@ Create a `.env` file in the project root:
 
 ```env
 # LLM
-GROQ_API_KEY=sk-...
+GROQ_API_KEY=gsk-...
 LLM_MODEL= "choose any model available in groq"
 
 # Embeddings
@@ -234,7 +234,7 @@ Open `http://localhost:8501` in your browser.
 curl -X POST http://localhost:8000/api/v1/query \
      -H "Authorization: Bearer your-secret-key" \
      -H "Content-Type: application/json" \
-     -d '{"question": "What is the refund policy?"}'
+     -d '{"question": "What is the attention mechanism?"}'
 ```
 
 ```json

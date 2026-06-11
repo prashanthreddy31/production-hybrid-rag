@@ -1,0 +1,394 @@
+[
+  {
+    "user_input": "What is the main contribution of the Attention Is All You Need paper?",
+    "reference": "The paper introduces the Transformer architecture, which relies entirely on self-attention mechanisms instead of recurrence or convolutions for sequence transduction tasks."
+  },
+  {
+    "user_input": "How does BERT differ from GPT in terms of training approach?",
+    "reference": "BERT uses bidirectional training by masking tokens and predicting them from both left and right context, while GPT uses unidirectional (left-to-right) autoregressive training."
+  },
+  {
+    "user_input": "What is the purpose of positional encoding in transformers?",
+    "reference": "Positional encodings inject information about the position of tokens in the sequence since the self-attention mechanism has no inherent notion of token order."
+  },
+  {
+    "user_input": "What problem does Retrieval Augmented Generation solve?",
+    "reference": "RAG addresses the limitation of LLMs having static knowledge by augmenting generation with relevant documents retrieved from an external knowledge base at inference time."
+  },
+  {
+    "user_input": "How does BM25 scoring work in information retrieval?",
+    "reference": "BM25 is a sparse retrieval algorithm that ranks documents based on term frequency, inverse document frequency, and document length normalization to estimate relevance to a query."
+  },
+  {
+    "user_input": "What is the difference between dense and sparse retrieval?",
+    "reference": "Dense retrieval uses learned vector embeddings to capture semantic similarity, while sparse retrieval uses exact term matching with algorithms like BM25 or TF-IDF."
+  },
+  {
+    "user_input": "Why is hybrid search better than dense-only search?",
+    "reference": "Hybrid search combines the semantic understanding of dense embeddings with the precise keyword matching of sparse methods, improving recall on queries where one method alone would miss relevant results."
+  },
+  {
+    "user_input": "What is the role of the retriever in a RAG pipeline?",
+    "reference": "The retriever fetches the most relevant documents or passages from a knowledge base given a user query, which are then passed to the generator LLM as context for answer generation."
+  },
+  {
+    "user_input": "What are ROUGE metrics used for in NLP?",
+    "reference": "ROUGE metrics measure the overlap between a generated summary and reference summaries using n-gram co-occurrence, used primarily to evaluate automatic summarization quality."
+  },
+  {
+    "user_input": "What is the vanishing gradient problem in RNNs?",
+    "reference": "The vanishing gradient problem occurs when gradients become exponentially small during backpropagation through time, making it difficult for RNNs to learn long-range dependencies in sequences."
+  },
+  {
+    "user_input": "How does multi-head attention improve over single-head attention?",
+    "reference": "Multi-head attention allows the model to jointly attend to information from different representation subspaces at different positions, capturing diverse patterns that a single attention head might miss."
+  },
+  {
+    "user_input": "What is knowledge distillation in machine learning?",
+    "reference": "Knowledge distillation is a technique where a smaller student model is trained to mimic the behavior of a larger teacher model, transferring learned representations into a more compact architecture."
+  },
+  {
+    "user_input": "What is the purpose of the context window in LLMs?",
+    "reference": "The context window defines the maximum number of tokens an LLM can process in a single forward pass, limiting how much text it can consider when generating a response."
+  },
+  {
+    "user_input": "How does chunking affect RAG retrieval quality?",
+    "reference": "Chunk size affects the granularity of retrieved context — too large chunks may include irrelevant information, while too small chunks may lose important context, both impacting answer quality."
+  },
+  {
+    "user_input": "What is the difference between extractive and abstractive summarization?",
+    "reference": "Extractive summarization selects and concatenates important sentences from the source text, while abstractive summarization generates new sentences that paraphrase the key information."
+  },
+  {
+    "user_input": "What is fine-tuning in the context of large language models?",
+    "reference": "Fine-tuning adapts a pre-trained model to a specific task or domain by continuing training on a smaller, task-specific dataset, updating the model weights to improve performance on that task."
+  },
+  {
+    "user_input": "What is the role of temperature in LLM text generation?",
+    "reference": "Temperature controls the randomness of predictions by scaling the logits before softmax — lower values make output more deterministic, higher values increase diversity and creativity."
+  },
+  {
+    "user_input": "How do vector databases support semantic search?",
+    "reference": "Vector databases store and index high-dimensional embeddings, enabling fast approximate nearest neighbor search to find semantically similar items based on vector distance or similarity."
+  },
+  {
+    "user_input": "What is hallucination in the context of LLMs?",
+    "reference": "Hallucination refers to when an LLM generates plausible-sounding but factually incorrect or unsupported information that is not grounded in the provided context or training data."
+  },
+  {
+    "user_input": "What evaluation metrics are commonly used for RAG systems?",
+    "reference": "Common RAG evaluation metrics include faithfulness (factual consistency with context), answer relevancy (pertinence to the query), context precision (relevance of retrieved chunks), and context recall (coverage of required information)."
+  },
+  {
+    "user_input": "What is an agent?",
+    "reference": "A Generative AI agent can be defined as an application that attempts to achieve a goal by observing the world and acting upon it using the tools that it has at its disposal. Agents are autonomous and can act independently of human intervention, especially when provided with proper goals or objectves they are meant to achieve." 
+  },
+  {
+    "user_input": "What is ReAct prompt?",
+    "reference": "a prompt engineering framework that provides a thought process strategy for language models to Reason and take action on a user query, with or without in-context examples."
+  },
+  {
+    "user_input": "What is Chain of thought?",
+    "reference": "a prompt engineering framework that enables reasoning capabilities through intermediate steps."
+  },
+  {
+    "user_input": "What is Tree of thought?",
+    "reference": "a prompt engineering framework that is well suited for exploration or strategic lookahead tasks. It generalizes over chain-of-thought prompting and allows the model to explore various thought chains that serve as intermediate steps for general problem solving with language models."
+  },
+  {
+    "user_input": "What is BERT designed for?",
+    "reference": "BERT is designed to pretrain deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context in all layers."
+  },
+  {
+    "user_input": "What are diffusion probabilistic models inspired by?",
+    "reference": "a class of latent variable models inspired by considerations from nonequilibrium thermodynamics."
+  },
+  {
+    "user_input": "What score did the model obtain on the unconditional CIFAR10 dataset?",
+    "reference": "we obtain an Inception score of 9.46 and a state-of-the-art FID score of 3.17."
+  },
+  {
+    "user_input": "What is a diffusion probabilistic model?",
+    "reference": "a parameterized Markov chain trained using variational inference to produce samples matching the data after finite time."
+  },
+  {
+    "user_input": "What process do the transitions of the diffusion model learn to reverse?",
+    "reference": "a diffusion process, which is a Markov chain that gradually adds noise to the data in the opposite direction of sampling until signal is destroyed."
+  },
+  {
+    "user_input": "What equivalence do the authors show for a certain parameterization of diffusion models?",
+    "reference": "an equivalence with denoising score matching over multiple noise levels during training and with annealed Langevin dynamics during sampling."
+  },
+  {
+    "user_input": "What is the generative model G designed to capture?",
+    "reference": "a generative model G that captures the data distribution"
+  },
+  {
+    "user_input": "What does the discriminative model D estimate?",
+    "reference": "a discriminative model D that estimates the probability that a sample came from the training data rather than G."
+  },
+  {
+    "user_input": "What is the training procedure for G?",
+    "reference": "The training procedure for G is to maximize the probability of D making a mistake."
+  },
+  {
+    "user_input": "What does the framework correspond to?",
+    "reference": "This framework corresponds to a minimax two-player game."
+  },
+  {
+    "user_input": "What happens in the space of arbitrary functions G and D?",
+    "reference": "a unique solution exists, with G recovering the training data distribution and D equal to 1/2 everywhere."
+  },
+  {
+    "user_input": "What are the two contributions of the paper?",
+    "reference": "Our contributions are two-fold."
+  },
+  {
+    "user_input": "What does the SGVB estimator yield?",
+    "reference": "a simple differentiable unbiased estimator of the lower bound"
+  },
+  {
+    "user_input": "What is the recognition model qφ(z|x)?",
+    "reference": "an approximation to the intractable true posterior pθ(z|x)"
+  },
+  {
+    "user_input": "How is the recognition model qφ(z|x) referred to in the paper?",
+    "reference": "a probabilistic encoder"
+  },
+  {
+    "user_input": "How is pθ(x|z) referred to in the paper?",
+    "reference": "a probabilistic decoder"
+  },
+  {
+    "user_input": "What does BERT stand for?",
+    "reference": "Bidirectional Encoder Representations from Transformers"
+  },
+  {
+    "user_input": "What is BERT designed to do?",
+    "reference": "pre-train deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context in all layers."
+  },
+  {
+    "user_input": "What allows the pre-trained BERT model to create state-of-the-art models for a wide range of tasks?",
+    "reference": "the pre-trained BERT model can be fine-tuned with just one additional output layer"
+  },
+  {
+    "user_input": "What pre-training objective does BERT use to alleviate the unidirectionality constraint?",
+    "reference": "a “masked language model” (MLM) pre-training objective"
+  },
+  {
+    "user_input": "What is the objective of the masked language model?",
+    "reference": "predict the original vocabulary id of the masked word based only on its context."
+  },
+  {
+    "user_input": "What algorithm do the authors propose for efficient inference and learning?",
+    "reference": "We introduce a stochastic variational inference and learning algorithm that scales to large datasets and, under some mild differentiability conditions, even works in the intractable case."
+  },
+  {
+    "user_input": "Why is the second RHS term called the variational lower bound?",
+    "reference": "Since this KL-divergence is non-negative, the second RHS term L(θ, φ; x(i)) is called the (variational) lower bound on the marginal likelihood of datapoint i"
+  },
+  {
+    "user_input": "What is the major limitation of standard language models according to the BERT paper?",
+    "reference": "The major limitation is that standard language models are unidirectional"
+  },
+  {
+    "user_input": "What does the masked language model enable?",
+    "reference": "the MLM objective enables the representation to fuse the left and the right context"
+  },
+  {
+    "user_input": "What is a distinctive feature of BERT?",
+    "reference": "A distinctive feature of BERT is its unified architecture across different tasks."
+  },
+  {
+    "user_input": "What is the main limitation of agentic RAG that LatentRAG aims to address?",
+    "reference": "This iterative process incurs substantial latency due to the autoregressive generation of lengthy thoughts and subqueries."
+  },
+  {
+    "user_input": "What is LatentRAG?",
+    "reference": "a novel framework that shifts both reasoning and retrieval from discrete language space to continuous latent space."
+  },
+  {
+    "user_input": "How does LatentRAG generate thoughts and subqueries?",
+    "reference": "LatentRAG produces latent tokens for thoughts and subqueries directly from the hidden states in a single forward pass."
+  },
+  {
+    "user_input": "What does LatentRAG align in latent space?",
+    "reference": "We align LLMs with dense retrieval models in the latent space."
+  },
+  {
+    "user_input": "What does the latent-space alignment enable?",
+    "reference": "enabling retrieval over latent subquery tokens and supporting end-to-end joint optimization."
+  },
+  {
+    "user_input": "What mechanism is incorporated to improve transparency?",
+    "reference": "we incorporate a parallel latent decoding mechanism that translates latent tokens back into natural language."
+  },
+  {
+    "user_input": "What percentage of latency overhead does LatentRAG reduce on average?",
+    "reference": "while significantly reducing latency overhead by approximately 90% on average"
+  },
+  {
+    "user_input": "What are the latency bottlenecks of agentic RAG?",
+    "reference": "the latency bottlenecks of agentic RAG lie in the thought and subquery generation stages."
+  },
+  {
+    "user_input": "What is latent reasoning?",
+    "reference": "an efficient reasoning paradigm that performs reasoning within the continuous hidden states of the LLM, also referred to as latent tokens, without explicitly generating discrete language tokens."
+  },
+  {
+    "user_input": "How are latent tokens obtained in LatentRAG?",
+    "reference": "These latent tokens are obtained in a single forward pass, enabling parallel computation and avoiding the inefficiency of autoregressive generation."
+  },
+  {
+    "user_input": "What is the main idea behind CLIP?",
+    "reference": "predicting which caption goes with which image is an efficient and scalable way to learn SOTA image representations from scratch"
+  },
+  {
+    "user_input": "How many image-text pairs were used to train CLIP?",
+    "reference": "a dataset of 400 million (image, text) pairs collected from the internet"
+  },
+  {
+    "user_input": "What enables zero-shot transfer in CLIP?",
+    "reference": "natural language is used to reference learned visual concepts (or describe new ones) enabling zero-shot transfer of the model to downstream tasks."
+  },
+  {
+    "user_input": "What does CLIP stand for?",
+    "reference": "Contrastive Language-Image Pre-training"
+  },
+  {
+    "user_input": "What is learned during CLIP training?",
+    "reference": "CLIP learns a multi-modal embedding space by jointly training an image encoder and text encoder"
+  },
+  {
+    "user_input": "What objective does CLIP optimize?",
+    "reference": "maximize the cosine similarity of the image and text embeddings of the N real pairs in the batch while minimizing the cosine similarity of the embeddings of the N² − N incorrect pairings."
+  },
+  {
+    "user_input": "What dataset did the authors construct?",
+    "reference": "we constructed a new dataset of 400 million (image, text) pairs collected form a variety of publicly available sources on the Internet."
+  },
+  {
+    "user_input": "What is a key advantage of learning from natural language?",
+    "reference": "it doesn’t “just” learn a representation but also connects that representation to language which enables flexible zero-shot transfer."
+  },
+  {
+    "user_input": "How does CLIP perform zero-shot prediction?",
+    "reference": "the learned text encoder synthesizes a zero-shot linear classifier by embedding the names or descriptions of the target dataset’s classes."
+  },
+  {
+    "user_input": "What does LoRA stand for?",
+    "reference": "Low-Rank Adaptation"
+  },
+  {
+    "user_input": "What is the key idea behind LoRA?",
+    "reference": "freezes the pre-trained model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture"
+  },
+  {
+    "user_input": "How much can LoRA reduce trainable parameters for GPT-3 175B?",
+    "reference": "LoRA can reduce the number of trainable parameters by 10,000 times"
+  },
+  {
+    "user_input": "How much GPU memory reduction does LoRA achieve?",
+    "reference": "the GPU memory requirement by 3 times"
+  },
+  {
+    "user_input": "What hypothesis motivates LoRA?",
+    "reference": "the change in weights during model adaptation also has a low “intrinsic rank”"
+  },
+  {
+    "user_input": "Why is LoRA storage efficient?",
+    "reference": "we only optimize the injected, much smaller low-rank matrices."
+  },
+  {
+    "user_input": "What happens to the pretrained weights during LoRA training?",
+    "reference": "W0 is frozen and does not receive gradient updates"
+  },
+  {
+    "user_input": "What advantage does LoRA have over adapters at inference time?",
+    "reference": "no additional inference latency"
+  },
+  {
+    "user_input": "What practical benefit does LoRA provide when switching tasks?",
+    "reference": "we can freeze the shared model and efficiently switch tasks by replacing the matrices A and B"
+  },
+  {
+    "user_input": "What are the two challenges introduced when using latent tokens as retrieval queries?",
+    "reference": "This introduces two challenges. (1) Data scarcity ... (2) Transparency"
+  },
+  {
+    "user_input": "Why does CLIP use a contrastive objective?",
+    "reference": "we explored training a system to solve the potentially easier proxy task of predicting only which text as a whole is paired with which image and not the exact words of that text."
+  },
+  {
+    "user_input": "Why do the authors believe LoRA works?",
+    "reference": "We hypothesize that the change in weights during model adaptation also has a low intrinsic rank"
+  },
+  {
+    "user_input": "What enables end-to-end optimization in LatentRAG?",
+    "reference": "This design enables fully differentiable end-to-end joint optimization of the LLM and the retrieval model."
+  },
+  {
+    "user_input": "What is CLIP's multimodal training objective?",
+    "reference": "CLIP jointly trains an image encoder and a text encoder to predict the correct pairings of a batch of (image, text) training examples."
+  },
+  {
+    "user_input": "What is the difference between generative and discriminative models??",
+    "reference": "Generative models, such as Variational Autoencoders (VAEs) and Generative Adversarial Networks (GANs), are designed to generate new data samples by understanding and capturing the underlying data distribution. Discriminative models, on the other hand, focus on distinguishing between different classes or categories within the data."
+  },
+  {
+    "user_input": "What problems of RNNs do transformer models solve?",
+    "reference": "Parallelization, Long-term dependencies, Scalability"
+  },
+  {
+    "user_input": "Why is a multi-head attention needed?",
+    "reference": "Multi-head attention allows a model to jointly attend to information from different representation subspaces at different positions. This is achieved by running several attention mechanisms (heads) in parallel, each with its own set of learnable weights. The key benefits include:"
+  },
+  {
+    "user_input": "What is an AI Agent?",
+    "reference": "An AI agent, on the other hand, is a system where an LLM is placed in a loop with the ability to: perceive its environment, reason about what to do next, take actions — like calling tools, searching the web, running code — and observe the results of those actions to inform the next step."
+  },
+  {
+    "user_input": "What is the ReAct pattern?",
+    "reference": "ReAct — short for Reasoning + Acting — is a prompting and agent design pattern introduced in a 2022 paper that interleaves reasoning traces with actions. It's probably the most foundational pattern in agentic AI."
+  },
+  {
+    "user_input": "What is an agentic loop?",
+    "reference": "The agentic loop is the core execution cycle of an agent — the repeating sequence of steps it goes through until a task is complete or it hits a stopping condition."
+  },
+  {
+    "user_input": "What is a Hierarchical Agent architecture?",
+    "reference": "Hierarchical agents extend the Orchestrator-Worker pattern into multiple levels of abstraction — like a management hierarchy in an organization."
+  },
+  {
+    "user_input": "What is the Supervisor pattern?",
+    "reference": "In the Supervisor pattern, there's a central Supervisor agent that doesn't just delegate tasks — it actively monitors all other agents' work, validates their outputs, and decides whether to accept results, request corrections, or retry with a different approach."
+  },
+  {
+    "user_input": "What is FastAPI, and why is it preferred over Flask or Django for ML/AI services?",
+    "reference": "FastAPI is a modern Python web framework for building APIs quickly. It's preferred for ML/AI services because it's fast, handles async operations well, and has automatic data validation. Flask is simpler but slower, while Django is heavy for just APIs."
+  },
+  {
+    "user_input": "Explain the role of Uvicorn and Starlette in FastAPI.",
+    "reference": "Uvicorn is the ASGI server that runs FastAPI applications. Starlette is the lightweight web framework that FastAPI is built on top of, providing routing, requests, and responses functionality."
+  },
+  {
+    "user_input": "What is Pydantic, and why is it tightly integrated with FastAPI?",
+    "reference": "Pydantic is a data validation library that uses Python type hints. FastAPI uses it to automatically validate request data, provide clear error messages, and generate documentation."
+  },
+  {
+    "user_input": "What does async def mean in FastAPI endpoints?",
+    "reference": "async def makes a function asynchronous, meaning it can pause execution during I/O operations (like database calls) and let other requests run instead of blocking."
+  },
+  {
+    "user_input": "What is MMR (Maximal Marginal Relevance)?",
+    "reference": "MMR balances relevance and diversity in results. It selects documents that are relevant to the query but also different from already selected documents, avoiding redundancy."
+  },
+  {
+    "user_input": "Why do models hallucinate even with correct retrieval?",
+    "reference": "Models hallucinate when retrieved context is ambiguous, contradictory, or when the model prioritizes its training over provided context. Also happens if the model cannot say I don't know and fabricates answers."
+  },
+  {
+    "user_input": "What are rotary embeddings (RoPE)?",
+    "reference": "RoPE (Rotary Position Embeddings) encode position information by rotating the query and key vectors in attention. Unlike fixed sinusoidal embeddings that add position info, RoPE multiplies position into the attention mechanism itself."
+  }
+]

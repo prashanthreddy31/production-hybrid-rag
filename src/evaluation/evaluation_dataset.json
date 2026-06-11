@@ -1,0 +1,42 @@
+[
+  {
+    "user_input": "What is an agentic loop?",
+    "reference": "The agentic loop is the core execution cycle of an agent — the repeating sequence of steps it goes through until a task is complete or it hits a stopping condition."
+  },
+  {
+    "user_input": "What is a Hierarchical Agent architecture?",
+    "reference": "Hierarchical agents extend the Orchestrator-Worker pattern into multiple levels of abstraction — like a management hierarchy in an organization."
+  },
+  {
+    "user_input": "What is the Supervisor pattern?",
+    "reference": "In the Supervisor pattern, there's a central Supervisor agent that doesn't just delegate tasks — it actively monitors all other agents' work, validates their outputs, and decides whether to accept results, request corrections, or retry with a different approach."
+  },
+  {
+    "user_input": "What is FastAPI, and why is it preferred over Flask or Django for ML/AI services?",
+    "reference": "FastAPI is a modern Python web framework for building APIs quickly. It's preferred for ML/AI services because it's fast, handles async operations well, and has automatic data validation. Flask is simpler but slower, while Django is heavy for just APIs."
+  },
+  {
+    "user_input": "Explain the role of Uvicorn and Starlette in FastAPI.",
+    "reference": "Uvicorn is the ASGI server that runs FastAPI applications. Starlette is the lightweight web framework that FastAPI is built on top of, providing routing, requests, and responses functionality."
+  },
+  {
+    "user_input": "What is Pydantic, and why is it tightly integrated with FastAPI?",
+    "reference": "Pydantic is a data validation library that uses Python type hints. FastAPI uses it to automatically validate request data, provide clear error messages, and generate documentation."
+  },
+  {
+    "user_input": "What does async def mean in FastAPI endpoints?",
+    "reference": "async def makes a function asynchronous, meaning it can pause execution during I/O operations (like database calls) and let other requests run instead of blocking."
+  },
+  {
+    "user_input": "What is MMR (Maximal Marginal Relevance)?",
+    "reference": "MMR balances relevance and diversity in results. It selects documents that are relevant to the query but also different from already selected documents, avoiding redundancy."
+  },
+  {
+    "user_input": "Why do models hallucinate even with correct retrieval?",
+    "reference": "Models hallucinate when retrieved context is ambiguous, contradictory, or when the model prioritizes its training over provided context. Also happens if the model cannot say I don't know and fabricates answers."
+  },
+  {
+    "user_input": "What are rotary embeddings (RoPE)?",
+    "reference": "RoPE (Rotary Position Embeddings) encode position information by rotating the query and key vectors in attention. Unlike fixed sinusoidal embeddings that add position info, RoPE multiplies position into the attention mechanism itself."
+  }
+]
